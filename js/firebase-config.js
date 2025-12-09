@@ -26,28 +26,27 @@ import {
   getDownloadURL
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
 
-
-// =============== CONFIGURAÇÃO CORRIGIDA DO SEU FIREBASE ===============
+// CONFIG
 const firebaseConfig = {
   apiKey: "AIzaSyCQxeGDzDRFVmZU1_9pE1KsUeh0KqbdkwA",
   authDomain: "lojavirtual-mjsports.firebaseapp.com",
   projectId: "lojavirtual-mjsports",
-  storageBucket: "lojavirtual-mjsports.appspot.com", // ✔ CORRIGIDO
+  storageBucket: "lojavirtual-mjsports.appspot.com",
   messagingSenderId: "526937577254",
   appId: "1:526937577254:web:c26fbb6b76776928ad53e7"
 };
-// =======================================================================
 
-
-// Inicializar Firebase
+// Inicializar
 const app = initializeApp(firebaseConfig);
 
-// Serviços do Firebase
+// FIREBASE SERVICES
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+// CORREÇÃO PRINCIPAL → Storage no bucket correto
 const storage = getStorage(app);
 
-// Exportar para o restante do projeto
+// EXPORTAR
 export {
   app,
   auth,
