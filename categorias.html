@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Categorias - MJSports</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo-area">
+    <img src="./assets/img/logo.png" alt="Logo" class="logo">
+    <span class="brand">MJSports</span>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Início</a>
+    <a href="categorias.html">Categorias</a>
+  </nav>
+</header>
+
+<main class="categories-page">
+
+  <!-- LISTA DE CATEGORIAS -->
+  <section>
+    <h2>Todas as Categorias</h2>
+    <div class="categories-list" id="categories-list"></div>
+  </section>
+
+  <!-- PRODUTOS FILTRADOS -->
+  <section class="products-section">
+    <h2 id="category-title">Produtos por Categoria</h2>
+    <div class="products-grid" id="products-grid"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> MJSports.</span>
+</footer>
+
+<script type="module" src="./js/categorias-page.js"></script>
+
+</body>
+</html>

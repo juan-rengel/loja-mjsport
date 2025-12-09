@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Categorias - MJSports Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <h1>Categorias</h1>
+  <nav>
+    <a href="./admin-dashboard.html">Dashboard</a>
+    <button id="logout-btn">Sair</button>
+  </nav>
+</header>
+
+<main class="admin-main">
+
+  <section class="admin-panel">
+    <h2>Cadastrar / Editar Categoria</h2>
+
+    <form id="category-form">
+      <input type="hidden" id="category-id">
+
+      <label>Nome da Categoria</label>
+      <input type="text" id="category-name" required>
+
+      <button type="submit">Salvar</button>
+
+      <p id="category-msg" class="msg"></p>
+    </form>
+  </section>
+
+  <section class="admin-panel">
+    <h2>Categorias Cadastradas</h2>
+
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody id="categories-table-body"></tbody>
+    </table>
+  </section>
+
+</main>
+
+<script type="module" src="../js/admin-categorias.js"></script>
+
+</body>
+</html>

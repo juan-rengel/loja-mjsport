@@ -1,0 +1,293 @@
+/* BASE */
+
+body.admin-body {
+  background: #020617;
+  color: #e5e7eb;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* HEADER ADMIN */
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: #020617;
+  border-bottom: 1px solid #1f2937;
+}
+
+.admin-header h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.admin-header nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-header nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.admin-header nav a:hover {
+  text-decoration: underline;
+}
+
+.admin-header button,
+.admin-header #logout-btn {
+  border: none;
+  background: #ef4444;
+  color: #f9fafb;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.admin-header button:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* MAIN ADMIN */
+
+.admin-main {
+  padding: 20px;
+  display: grid;
+  gap: 18px;
+}
+
+.admin-card {
+  background: #020617;
+  border-radius: 14px;
+  padding: 18px;
+  text-decoration: none;
+  color: #f9fafb;
+  box-shadow: 0 1px 6px rgba(15, 23, 42, 0.6);
+  font-size: 0.95rem;
+  text-align: center;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.8);
+}
+
+/* PAINÉIS (FORM + LISTA) */
+
+.admin-panel {
+  background: #020617;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.7);
+}
+
+.admin-panel h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* FORMULÁRIOS */
+
+.admin-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-panel label {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.admin-panel input[type="text"],
+.admin-panel input[type="email"],
+.admin-panel input[type="password"],
+.admin-panel input[type="number"],
+.admin-panel input[type="file"],
+.admin-panel textarea,
+.admin-panel select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.admin-panel textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.admin-panel input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.admin-panel button[type="submit"],
+.admin-panel button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.admin-panel button:hover {
+  background: #16a34a;
+  box-shadow: 0 8px 16px rgba(34, 197, 94, 0.4);
+  transform: translateY(-1px);
+}
+
+/* TABELAS */
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.88rem;
+}
+
+.admin-table thead {
+  background: #020617;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 8px;
+  border-bottom: 1px solid #1f2937;
+  text-align: left;
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.admin-table tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.75);
+}
+
+/* BOTÕES DA TABELA */
+
+.admin-table button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.btn-edit {
+  background: #22c55e;
+  color: #022c22;
+}
+
+.btn-edit:hover {
+  background: #16a34a;
+}
+
+.btn-delete {
+  background: #ef4444;
+  color: #fef2f2;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+}
+
+/* LOGIN ADMIN */
+
+.admin-login-card {
+  max-width: 380px;
+  margin: 80px auto;
+  background: #020617;
+  padding: 20px 18px 22px;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.9);
+}
+
+.admin-login-card h1 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.admin-login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-login-card input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.admin-login-card button {
+  margin-top: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.admin-login-card button:hover {
+  background: #16a34a;
+  box-shadow: 0 8px 16px rgba(34, 197, 94, 0.4);
+  transform: translateY(-1px);
+}
+
+/* MENSAGENS */
+
+.msg {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #a7f3d0;
+}
+
+.error {
+  color: #fecaca;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  .admin-main {
+    padding: 12px;
+  }
+
+  .admin-panel {
+    padding: 14px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Administrador - MJSports</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-login-card">
+    <h1>Criar novo Administrador</h1>
+
+    <form id="register-form">
+      
+      <label>Chave secreta</label>
+      <input type="password" id="secret-key" placeholder="Insira a chave secreta" required>
+
+      <label>Email do administrador</label>
+      <input type="email" id="email" required>
+
+      <label>Senha do administrador</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Criar Admin</button>
+
+      <p id="register-msg" class="msg"></p>
+      <p id="register-error" class="error"></p>
+
+    </form>
+  </div>
+
+  <script type="module">
+    import { auth } from "../js/firebase-config.js";
+    import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+    const SECRET_KEY = "MJSPORTS-ADMIN-KEY-2025"; // ALTERE SE QUISER
+
+    const form = document.getElementById("register-form");
+    const msg = document.getElementById("register-msg");
+    const err = document.getElementById("register-error");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      msg.textContent = "";
+      err.textContent = "";
+
+      const typedKey = document.getElementById("secret-key").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+
+      // Verificação da chave secreta
+      if (typedKey !== SECRET_KEY) {
+        err.textContent = "Chave secreta incorreta.";
+        return;
+      }
+
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        msg.textContent = "Administrador criado com sucesso!";
+        form.reset();
+      } catch (error) {
+        err.textContent = "Erro ao criar administrador: " + error.message;
+      }
+    });
+  </script>
+
+</body>
+</html>
