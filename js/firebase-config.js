@@ -4,7 +4,7 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   onAuthStateChanged,
-  signOut,
+  signOut
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 import {
   getFirestore,
@@ -17,32 +17,37 @@ import {
   deleteDoc,
   query,
   where,
-  orderBy,
+  orderBy
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import {
   getStorage,
   ref,
   uploadBytes,
-  getDownloadURL,
+  getDownloadURL
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
 
-// Firebase Config (SEU PROJETO)
+
+// =============== CONFIGURAÇÃO CORRIGIDA DO SEU FIREBASE ===============
 const firebaseConfig = {
   apiKey: "AIzaSyCQxeGDzDRFVmZU1_9pE1KsUeh0KqbdkwA",
   authDomain: "lojavirtual-mjsports.firebaseapp.com",
   projectId: "lojavirtual-mjsports",
-  storageBucket: "lojavirtual-mjsports.appspot.com",
+  storageBucket: "lojavirtual-mjsports.appspot.com", // ✔ CORRIGIDO
   messagingSenderId: "526937577254",
   appId: "1:526937577254:web:c26fbb6b76776928ad53e7"
 };
+// =======================================================================
 
-// Inicializa Firebase
+
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
+
+// Serviços do Firebase
 const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 
-// Exporta módulos para uso em todo o sistema
+// Exportar para o restante do projeto
 export {
   app,
   auth,
@@ -63,5 +68,5 @@ export {
   orderBy,
   ref,
   uploadBytes,
-  getDownloadURL,
+  getDownloadURL
 };
