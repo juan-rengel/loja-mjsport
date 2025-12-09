@@ -31,7 +31,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyCQxeGDzDRFVmZU1_9pE1KsUeh0KqbdkwA",
   authDomain: "lojavirtual-mjsports.firebaseapp.com",
   projectId: "lojavirtual-mjsports",
-  storageBucket: "lojavirtual-mjsports.firebasestorage.app",
+  storageBucket: "lojavirtual-mjsports.appspot.com",
   messagingSenderId: "526937577254",
   appId: "1:526937577254:web:c26fbb6b76776928ad53e7"
 };
